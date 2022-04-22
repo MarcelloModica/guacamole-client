@@ -388,7 +388,6 @@ public class Extension {
             ZipFile extension = new ZipFile(file);
 
             try {
-
                 // Retrieve extension manifest
                 ZipEntry manifestEntry = extension.getEntry(MANIFEST_NAME);
                 if (manifestEntry == null)
