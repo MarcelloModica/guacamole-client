@@ -225,7 +225,7 @@ public class Extension {
 
         try {
 
-            logger.info("Check Extesion class name: "+name);
+            logger.info("Check extension class name: "+name);
 
             // Get authentication provider class
             Class<?> authenticationProviderClass = classLoader.loadClass(name);
