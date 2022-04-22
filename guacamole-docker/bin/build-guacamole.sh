@@ -200,7 +200,7 @@ if [ -f extensions/guacamole-auth-json/target/guacamole-auth-json*.jar ]; then
 fi
 
 #
-# Copy custom auth extension if it was present in  - guacamole-docker/bin/ -
+# Copy custom auth extension if it was present in  - guacamole-docker/bin/guacamole-extensions-custom/-p -
 #
 if [ -f /opt/guacamole/bin/guacamole-extensions-custom/guacamole-auth-custom*.jar ]; then
     mkdir -p "$DESTINATION/custom"
@@ -209,7 +209,7 @@ fi
 
 
 #
-# Copy ldap ad auth extension if it was present in  - guacamole-docker/bin/ -
+# Copy ldap ad auth extension if it was present in  - guacamole-docker/bin/guacamole-extensions-custom/ -
 #
 if [ -f /opt/guacamole/bin/guacamole-extensions-custom/guacamole-auth-ldapad*.jar ]; then
     mkdir -p "$DESTINATION/ldapad"
