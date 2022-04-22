@@ -38,12 +38,20 @@ import org.apache.guacamole.GuacamoleServerException;
 import org.apache.guacamole.net.auth.AuthenticationProvider;
 import org.apache.guacamole.resource.ClassPathResource;
 import org.apache.guacamole.resource.Resource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * A Guacamole extension, which may provide custom authentication, static
  * files, theming/branding, etc.
  */
 public class Extension {
+
+
+    /**
+     * Logger for this class.
+     */
+    private final Logger logger = LoggerFactory.getLogger(Extension.class);
 
     /**
      * The Jackson parser for parsing the language JSON files.
@@ -216,6 +224,8 @@ public class Extension {
             throws GuacamoleException {
 
         try {
+
+            logger.info("Check Extesion class name: "+name);
 
             // Get authentication provider class
             Class<?> authenticationProviderClass = classLoader.loadClass(name);
